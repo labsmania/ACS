@@ -1,0 +1,15 @@
+go to dvwa
+csrf
+change the password
+copy its url
+
+go to burp suite
+go to decoder
+encode  the password change part
+append the encoded part to the url
+it works
+
+now copy the main div and create your own html file
+open and try to mimic the original page
+
+verify the attack by trying to login

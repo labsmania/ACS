@@ -1,0 +1,11 @@
+go to dvwa
+upload
+upload some random file to check 
+
+echo "<?php 
+echo "Hello from your PHP file"; 
+?>" > test.php
+
+upload the above file and navigate to
+
+http://metasploitable_ip/dvwa/hackable/uploads/test.php

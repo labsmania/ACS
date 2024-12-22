@@ -1,0 +1,14 @@
+Hashcat
+
+md5sum 
+echo -n "welcome" | md5sum | tr -d ' -' > hash.txt
+hashcat -m 0 -a 0 hash.txt /usr/share/wordlists/rockyou.txt -o pass.txt
+
+md5sum bruteforce method
+hashcat -a 3 -m 0 has.txt ?a?a?a?a?a?a?a --show
+
+sha256 
+hashcat -a 3 -m 1400 brt.txt /usr/share/wordlists/rockyou.txt -o out.txt
+
+sha256 bruteforce method
+hashcat -a 3 -m 1400 brt.txt ?a?a?a?a?a?a?a -o out.txt

